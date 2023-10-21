@@ -1,0 +1,79 @@
+.box{
+    background-color: #000;
+    font-family: 'Josefin Sans', sans-serif;
+    text-align: center;
+    position: relative;
+}
+.box img{
+    width: 100%;
+    height: auto;
+    transition: all 0.5s ease 0s;
+}
+.box:hover img{
+    opacity: 0.3;
+    filter: grayscale(100%);
+}
+.box .box-content{
+    color: #fff;
+    background: #5196ec;
+    width: 85%;
+    padding: 15px 20px;
+    opacity: 0;
+    transform: perspective(700px) translateX(-50%) rotateY(40deg);
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transition: all 0.4s ease-out;
+}  
+.box:hover .box-content{
+    opacity: 0.8;
+    transform: perspective(700px) translateX(-50%) rotateY(0);
+}
+.box .title{
+    font-size: 22px;
+    font-weight: 600;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 3px rgba(0, 0, 0, .6);
+    margin: 0;
+}
+.box .post{
+    font-size: 16px;
+    letter-spacing: 1px;
+    text-transform: capitalize;
+    text-shadow: 2px 2px 3px rgba(0, 0, 0, .6);
+}
+.box .icon{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    opacity: 0;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    z-index: 1;
+    transition: all 0.4s ease-out;
+}
+.box:hover .icon{ opacity: 0.8; }
+.box .icon li{
+    margin: 0 3px;
+    display: inline-block;
+}
+.box .icon li a{
+    color: #fff;
+    background-color: #5196ec;
+    font-size: 15px;
+    text-align: center;
+    line-height: 33px;
+    height: 30px;
+    width: 30px;
+    display: block;
+    transition: all .3s ease 0s;
+}
+.box .icon li a:hover{
+    color: #fff;
+    box-shadow: 0 0 0 5px rgba(255,255,255,0.1);
+    transform: skew(10deg);
+}
+@media only screen and (max-width:990px){
+    .box{ margin: 0 0 30px; }
+}
